@@ -15,6 +15,7 @@ function PostPage() {
             try {
                 setPageLoading(true);
                 const res = await fetch(`/api/post/getposts/?slug=${postSlug}`);
+                console.log(recentPosts.length);
                 const data = await res.json();
 
                 if (!res.ok) {
